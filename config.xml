@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.yarilcaos"
+        id        = "com.da7os.itcMovil"
         versionCode = "2"
         version   = "2.11">
     <name>ITA Educacion movil</name>
