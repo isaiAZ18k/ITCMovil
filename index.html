@@ -65,7 +65,6 @@
 
             //push
 
-
           /*  document.addEventListener('deviceready', function () {
             var Pushbots = PushbotsPlugin.initialize("56ab9216177959af218b4567", {"android":{"sender_id":"AIzaSyCUhgNcU33Fp7miG4p6AimklpWbJWzN8Xg"}});
             }, false);*/
@@ -75,7 +74,7 @@
 
               var client = new WindowsAzure.MobileServiceClient("https://itaphonegap.azure-mobile.net/", "qQcSpCijsYehYrJyXUnsfIMfaeIQpl31");
 
-              var item = { text: "Conectado al servicio Azure" };
+              var item = { text: "Nueva conexión" };
               client.getTable("Item").insert(item);
 
               //var client = new WindowsAzure.MobileServiceClient('https://itcacapullco.azurewebsites.net');
