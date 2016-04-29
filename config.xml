@@ -494,6 +494,6 @@
         </array>
     </gap:config-file>
 
-    <access origin="https://itaphonegap.azure-mobile.net/" />
+    <access origin="*" />
 
 </widget>
