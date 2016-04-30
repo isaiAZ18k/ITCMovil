@@ -34,7 +34,6 @@
         };
 
     </script>
-    <!--<script src="lib/index.js"></script>-->
     <script src="cordova.js"></script>
     <script src="externallib/jquery.min.js"></script>
     <script src="externallib/jquery.touchSwipe.min.js"></script>
@@ -65,29 +64,14 @@
 
             //push
 
+
           /*  document.addEventListener('deviceready', function () {
             var Pushbots = PushbotsPlugin.initialize("56ab9216177959af218b4567", {"android":{"sender_id":"AIzaSyCUhgNcU33Fp7miG4p6AimklpWbJWzN8Xg"}});
             }, false);*/
-            document.addEventListener('deviceready', function () {
-                //var Pushbots = PushbotsPlugin.initialize("5720e8654a9efacd238b4567", { "android": { "sender_id": "369590472735" } 
-                //window.plugins.PushbotsPlugin.initialize("5720e8654a9efacd238b4567", { "android": { "sender_id": "369590472735" } });
-                window.plugins.PushbotsPlugin.initialize("5720e8654a9efacd238b4567", { "android": { "sender_id": "369590472735" } });
+          document.addEventListener('deviceready', function () {
+              window.plugins.PushbotsPlugin.initialize("5720e8654a9efacd238b4567", { "android": { "sender_id": "369590472735" } });
+            //var client = new WindowsAzure.MobileServiceClient(ZUMOAPPURL);
             }, false);
-
-          //document.addEventListener('deviceready', function () {
-          //    //var Pushbots = PushbotsPlugin.initialize("5720e8654a9efacd238b4567", { "android": { "sender_id": "369590472735" } 
-          //    //window.plugins.PushbotsPlugin.initialize("5720e8654a9efacd238b4567", { "android": { "sender_id": "369590472735" } });
-
-          //    var client = new WindowsAzure.MobileServiceClient("https://itaphonegap.azure-mobile.net/", "qQcSpCijsYehYrJyXUnsfIMfaeIQpl31");
-
-          //    var item = { text: "Nueva conexión" };
-          //    client.getTable("Item").insert(item);
-
-          //    //var client = new WindowsAzure.MobileServiceClient('https://itcacapullco.azurewebsites.net');
-          //    //var item = { test: 'Item 1', complete: false };
-          //    //client.getTable('todoitem').insert(item);
-
-          //}, false);
             //end push
             MM.log('Deviceready fired');
             MM.deviceReady = true;
@@ -420,6 +404,7 @@
                 <input type="text" id="username" autocapitalize="off" autocorrect="off" placeholder="<%= MM.lang.s("username") %>">
             </p>
             <p>
+               
                 <input type="password" id="password" placeholder="<%= MM.lang.s("password") %>">
             </p>
         </div>
@@ -430,7 +415,8 @@
     </div>
 </form>
 <div id= "helplogin">
-    <a href="http://bringslive.com/login/signup.php?" target="_blank">Registrarme</a>
+    <a href="http://ita-acapulco.azurewebsites.net/login/signup.php?" target="_blank">Registrarme</a>
+    
     <a href="#manage-accounts"><%= MM.lang.s("manageaccounts") %></a>
 </div>
 </script>
