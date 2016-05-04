@@ -90,7 +90,7 @@
     <gap:plugin name="com.phonegap.plugin.statusbar" />
     <gap:plugin name="pushbots-cordova-plugin" source="npm" />
     <gap:plugin name="com.microsoft.azure-mobile-services" spec="1.2.8" source="pgb" />
-    <gap:plugin name="msopentech.azure.notificationhub" spec="0.0.6" source="pgb" />
+    <!--<gap:plugin name="msopentech.azure.notificationhub" spec="0.0.6" source="pgb" />-->
     <!--<plugin name="cordova-plugin-ms-azure-mobile-apps" spec="~2.0.0-beta" />-->
 
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
