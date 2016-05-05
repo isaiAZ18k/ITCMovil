@@ -71,7 +71,11 @@
             document.addEventListener('deviceready', function () {
                 window.plugins.PushbotsPlugin.initialize("5720e8654a9efacd238b4567", { "android": { "sender_id": "369590472735" } });
 
-                client.login('google')
+          
+                //var client = new WindowsAzure.MobileServiceClient("https://itaphonegap.azure-mobile.net/", "qQcSpCijsYehYrJyXUnsfIMfaeIQpl31");
+                var client = new WindowsAzure.MobileServiceClient("http://webapplicationpushita20160504094932.azurewebsites.net");
+
+                client.login('http://webapplicationpushita20160504094932.azurewebsites.net')
                     .then(function () {
                         // Create a table reference
                         todoItemTable = client.getTable('todoitem');
