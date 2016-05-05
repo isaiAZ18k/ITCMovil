@@ -64,7 +64,6 @@
 
             //push
 
-
             /*  document.addEventListener('deviceready', function () {
               var Pushbots = PushbotsPlugin.initialize("56ab9216177959af218b4567", {"android":{"sender_id":"AIzaSyCUhgNcU33Fp7miG4p6AimklpWbJWzN8Xg"}});
               }, false);*/
@@ -73,54 +72,54 @@
 
           
                 //var client = new WindowsAzure.MobileServiceClient("https://itaphonegap.azure-mobile.net/", "qQcSpCijsYehYrJyXUnsfIMfaeIQpl31");
-                var client = new WindowsAzure.MobileServiceClient("http://webapplicationpushita20160504094932.azurewebsites.net");
+                //var client = new WindowsAzure.MobileServiceClient("http://webapplicationpushita20160504094932.azurewebsites.net");
 
-                client.login('http://webapplicationpushita20160504094932.azurewebsites.net')
-                    .then(function () {
-                        // Create a table reference
-                        todoItemTable = client.getTable('todoitem');
+                //client.login('http://webapplicationpushita20160504094932.azurewebsites.net')
+                //    .then(function () {
+                //        // Create a table reference
+                //        todoItemTable = client.getTable('todoitem');
 
-                        // Refresh the todoItems
-                        refreshDisplay();
+                //        // Refresh the todoItems
+                //        refreshDisplay();
 
-                        // Wire up the UI Event Handler for the Add Item
-                        $('#add-item').submit(addItemHandler);
-                        $('#refresh').on('click', refreshDisplay);
+                //        // Wire up the UI Event Handler for the Add Item
+                //        $('#add-item').submit(addItemHandler);
+                //        $('#refresh').on('click', refreshDisplay);
 
-                        // Added to register for push notifications.
-                        registerForPushNotifications();
+                //        // Added to register for push notifications.
+                //        registerForPushNotifications();
 
-                    }, handleError);
+                //    }, handleError);
 
                 // Register for Push Notifications.
                 // Requires that phonegap-plugin-push be installed.
 
-                var pushRegistration = null;
-                function registerForPushNotifications() {
-                    pushRegistration = PushNotification.init({
-                        android: {
-                            senderID: '369590472735'
-                        },
-                        ios: {
-                            alert: 'true',
-                            badge: 'true',
-                            sound: 'true'
-                        },
-                        wns: {
+                //var pushRegistration = null;
+                //function registerForPushNotifications() {
+                //    pushRegistration = PushNotification.init({
+                //        android: {
+                //            senderID: '369590472735'
+                //        },
+                //        ios: {
+                //            alert: 'true',
+                //            badge: 'true',
+                //            sound: 'true'
+                //        },
+                //        wns: {
 
-                        }
-                    });
+                //        }
+                //    });
 
-                    pushRegistration.on('registration', function (data) {
-                        client.push.register('gcm', data.registrationId);
-                    });
+                //    pushRegistration.on('registration', function (data) {
+                //        client.push.register('gcm', data.registrationId);
+                //    });
 
-                    pushRegistration.on('notification', function (data, d2) {
-                        alert('Push Received: ' + data.message);
-                    });
+                //    pushRegistration.on('notification', function (data, d2) {
+                //        alert('Push Received: ' + data.message);
+                //    });
 
-                    pushRegistration.on('error', handleError);
-                }
+                //    pushRegistration.on('error', handleError);
+                //}
 
             }, false);
             //end push
